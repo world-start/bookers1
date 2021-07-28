@@ -1,8 +1,18 @@
 <h1>Editing Book</h1>
+<!--エラーメッセージ部分-->
+<% if @book.errors.any? %>
+  <%= @book.errors.count %> errors prohibited this book from begin saved:
+  <ul>
+    <% @book.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
 <%= form_with model:@book, url:"/books/#{@book.id}/edit", local:true do |f| %>
-  <p>Title</p>
+  <p class="new-title">Title</p>
   <%= f.text_field :title %>
-  <p>Body</p>
+  <p class="new-body">Body</p>
   <%= f.text_field :body %>
   <div>
   <%= f.submit 'Update Book' %>

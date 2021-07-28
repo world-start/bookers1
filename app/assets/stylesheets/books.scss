@@ -1,3 +1,18 @@
 // Place all the styles related to the books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.links{
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.actions{
+  margin: 0;
+}
+
+.new-title, .new-body{
+  margin:0;
+}
